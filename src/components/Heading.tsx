@@ -8,8 +8,8 @@ export default function Header() {
         </h1>
         <div className=" bg-gray-900 rounded-lg py-6 px-12">
           <p className="text-md">
-            I'm Kushagra Sharma-
-            FullStack Developer
+            {`I'm Kushagra Sharma-
+  FullStack Developer`}
           </p>
         </div>
       </header>
