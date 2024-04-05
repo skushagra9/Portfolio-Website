@@ -1,5 +1,6 @@
 import {
   CircleIcon,
+  GitHubLogoIcon,
   StarIcon,
 } from "@radix-ui/react-icons"
 import { Button } from "@/components/ui/button"
@@ -13,7 +14,7 @@ import {
 interface DemoGithubProps {
   name: string;
   description: string;
-  stars: string;
+  stars: number;
   language: string;
   link: string;
 }
@@ -21,21 +22,16 @@ interface DemoGithubProps {
 export function DemoGithub({ name, description, stars, language, link }: DemoGithubProps) {
   return (
     <Card>
-      <CardHeader className="grid grid-cols-[1fr_110px] items-start gap-4 space-y-0">
+      <CardHeader className="grid items-start gap-4 space-y-0">
         <div className="space-y-1">
           <CardTitle>{name}</CardTitle>
           <CardDescription>
             {description}      </CardDescription>
         </div>
-        <div className="flex items-center space-x-1 rounded-md bg-secondary text-secondary-foreground">
-          <Button onClick={() => window.open(link)} variant="secondary" className="px-3 shadow-none">
-            <StarIcon className="mr-2 h-4 w-4" />
-            Star
-          </Button>
-        </div>
+
       </CardHeader>
       <CardContent>
-        <div className="flex space-x-4 text-sm text-muted-foreground">
+        <div className="flex space-x-4 text-sm w-full text-muted-foreground">
           <div className="flex items-center">
             <CircleIcon className="mr-1 h-3 w-3 fill-sky-400 text-sky-400" />
             {language}
@@ -44,6 +40,10 @@ export function DemoGithub({ name, description, stars, language, link }: DemoGit
             <StarIcon className="mr-1 h-3 w-3" />
             {stars}
           </div>
+          <a className="flex items-center" href={link}>
+            <GitHubLogoIcon className="mr-1 h-3 w-3" />
+            Github
+          </a>
         </div>
       </CardContent>
     </Card>
