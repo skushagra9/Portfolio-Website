@@ -9,13 +9,14 @@ export const Exp = () => {
 
       {Experience.map((e) => (
         <div key={e.year} className="flex flex-col items-center justify-start ">
-          <div className="w-4 h-full bg-gradient-to-b from-transparent to-gray-700 rounded-full"></div>
+          <div className="line"></div>
           <span className="font-bold">{e.timeline} ({e.year}): </span>
           <span>
             {e.title.cargo} at {e.title.name}
           </span>
 
           <div className="w-2/3 dark:text-gray-300">
+            <br />
             {e.description.split('\n').map((item, index) => (
               <span key={index}>
                 {item.trim()}

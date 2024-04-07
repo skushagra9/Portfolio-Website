@@ -66,6 +66,15 @@
   }
 }
 
+.line {
+  width: 4px;
+  margin: 10px auto;
+  height: 100px;
+  border-radius: 60px;
+  background: linear-gradient(180deg, rgb(224 231 255), rgb(129 140 248));
+ }
+
+
 @layer base {
   * {
     @apply border-border;

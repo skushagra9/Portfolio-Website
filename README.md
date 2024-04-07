@@ -1,15 +1,6 @@
-<p align="center" style="margin-top: 120px">
+## Portfolio Website
 
-  <h3 align="center">Portfolio Website</h3>
-
-  <p align="center">
-   Elevate your notes on WhatsApp with AI enhancements, seamlessly synced to Notion. 🚀 Boost your productivity and creativity effortlessly! ✨
-</p>
-
-## About Notion Whatsapp AI 🏓
-
-🚀 Crafting digital experiences with passion! Explore my projects and journey in tech. Let's connect and create together! 👩
-# Contact me 💌
+Elevate your notes on WhatsApp with AI enhancements, seamlessly synced to Notion. 🚀 Boost your productivity and creativity effortlessly! ✨# Contact me 💌
 
 If you want to learn more about this project or have any questions, send me an email at (mailto:skushagra.sharma@gmail.com)
 <br/><br/>
