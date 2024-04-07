@@ -19,9 +19,9 @@ export function DropdownMenuDemo() {
       </DropdownMenuTrigger>
       <DropdownMenuContent className="w-56">
         <DropdownMenuGroup>
-          <a href="#me">
+          <a href="#experience">
             <DropdownMenuItem>
-              Me
+              Experience
             </DropdownMenuItem>
           </a>
 

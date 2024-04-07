@@ -7,10 +7,9 @@ import Project from "@/components/Projects"
 export default function Home() {
   return (
 
-    <div className="flex flex-col items-center ">
+    <div className="flex flex-col items-center gap-y-12">
       <Header />
       <Introduction />
-
       <Skills />
       <Exp />
       <Project />

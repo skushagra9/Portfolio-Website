@@ -12,13 +12,14 @@ export function Navbar() {
   return (
     <div className="flex flex-row mx-auto w-full md:w-1/2 justify-between items-center pt-2 md:pt-4">
       <div className="hidden md:flex flex-row justify-center md:justify-start">
-        <a href="#me">
+
+        <a href="#experience">
           <Button variant="link">
-            Me
+            Experience
           </Button>
         </a>
 
-        <a href="#works">
+        <a href="#projects">
           <Button variant="link">
             Works
           </Button>
