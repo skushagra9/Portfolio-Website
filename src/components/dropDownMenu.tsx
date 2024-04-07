@@ -31,11 +31,11 @@ export function DropdownMenuDemo() {
             </DropdownMenuItem>
           </a>
 
-          <a href="#contact">
+          {/* <a href="#contact">
             <DropdownMenuItem>
               Contact
             </DropdownMenuItem>
-          </a>
+          </a> */}
 
           <a href="">
             <DropdownMenuItem>
