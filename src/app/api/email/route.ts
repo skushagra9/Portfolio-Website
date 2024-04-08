@@ -1,8 +1,18 @@
 import { Resend } from "resend";
+import { z } from "zod";
+
 const resend = new Resend(process.env.RESEND_API_KEY);
 
+const ContactFormSchema = z.object({
+  message: z.string().max(250),
+  name: z.string().max(50),
+  SenderEmail: z.string().max(80),
+});
+
+export type ContactFormData = z.infer<typeof ContactFormSchema>;
+
 export async function POST(request: Request) {
-  const { message, name, SenderEmail } = await request.json();
+  const { message, name, SenderEmail }: ContactFormData = ContactFormSchema.parse(await request.json());
   try {
     if (!message) {
       return Response.json({
@@ -19,7 +29,7 @@ export async function POST(request: Request) {
     });
 
     return Response.json({
-      success: "Successfully Sent",
+      success: "Successfully Recieved",
       message: "I will Contact You shortly"
     })
 
@@ -27,6 +37,4 @@ export async function POST(request: Request) {
     console.error("Error saving data to database:", error);
     return Response.json({ error: "Error saving data to database" });
   }
-
-
 }

@@ -29,7 +29,7 @@ export function DropdownMenuDemo() {
 
         {navigation.map((menuItem) => {
           return (
-            <DropdownMenuItem key={menuItem.name}>
+            <DropdownMenuItem asChild key={menuItem.name}>
               <Link href={menuItem.href}>
                 {menuItem.name}
               </Link>

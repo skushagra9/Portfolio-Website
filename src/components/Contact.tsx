@@ -31,10 +31,11 @@ const ContactForm = () => {
       });
 
       const data = await result.json();
-      if (data.success) {
+      if (!data.error) {
         toast({
           title: data.success,
-          description: data.messsage,
+          description: data.message,
+          variant: "error"
         })
 
         formRef.current?.reset();
@@ -43,6 +44,7 @@ const ContactForm = () => {
       toast({
         title: "Error Sending the Form",
         description: "Please Try Again",
+        variant: "error"
       })
 
       console.error(error)
@@ -63,7 +65,7 @@ const ContactForm = () => {
             <CardHeader>
               <CardTitle className="icon_underline">Send me a mail.</CardTitle>
               <CardDescription>
-                Once the form is submitted, you will be redirected to the home page.
+                After submitting the form, a toast message will appear for you.
               </CardDescription>
             </CardHeader>
             <CardContent>

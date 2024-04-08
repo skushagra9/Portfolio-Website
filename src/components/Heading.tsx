@@ -1,7 +1,7 @@
 
 export default function Header() {
   return (
-    <section className="header py-16 mt-4">
+    <section className="header pt-16 pb-8 mt-4 px-8 md:px-0">
       <header className="text-center">
         <h1 className="header-title text-5xl font-bold mb-4 text-indigo-300 dark:text-indigo-100">
           Hello.
