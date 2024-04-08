@@ -31,8 +31,9 @@ export function DropdownMenuDemo() {
           return (
             <DropdownMenuItem key={menuItem.name}>
               <Link href={menuItem.href}>
-                <a>{menuItem.name}</a>
-              </Link>            </DropdownMenuItem>
+                {menuItem.name}
+              </Link>
+            </DropdownMenuItem>
           );
         })}
       </DropdownMenuContent>

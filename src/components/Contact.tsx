@@ -12,7 +12,6 @@ import {
 } from "@/components/ui/card";
 import { Button } from "./ui/button";
 import { useToast } from './ui/use-toast';
-import { SendEmail } from '@/app/api/SendEmail';
 
 const ContactForm = () => {
   const formRef = useRef<HTMLFormElement | null>(null);
@@ -21,8 +20,16 @@ const ContactForm = () => {
   const handleSubmit = async (event: any) => {
     event.preventDefault();
     const formData = new FormData(event.target);
+    const name = formData.get('name');
+    const SenderEmail = formData.get('SenderEmail');
+    const message = formData.get('message');
     try {
-      const result = await SendEmail(formData);
+      const result = await fetch("/api/email", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, SenderEmail, message }),
+      });
+
       const data = await result.json();
       if (data.success) {
         toast({
