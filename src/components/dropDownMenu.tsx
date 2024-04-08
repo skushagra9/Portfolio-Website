@@ -1,12 +1,21 @@
-import { Button } from "@/components/ui/button"
+"use client"
+import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuGroup,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
-import { HamburgerMenuIcon } from "@radix-ui/react-icons"
+} from "@/components/ui/dropdown-menu";
+import { HamburgerMenuIcon } from "@radix-ui/react-icons";
+import Link from 'next/link'
+
+const navigation = [
+  { name: "Experience", href: "#experience" },
+  { name: "Works", href: "#projects" },
+  { name: "Contact", href: "#contact" },
+  { name: "CV", href: "https://drive.google.com/file/d/1pdSCNN5qCNnyOkYpSdRXeb3i2PwXX8QK/view?usp=sharing" },
+];
 
 export function DropdownMenuDemo() {
   return (
@@ -15,36 +24,18 @@ export function DropdownMenuDemo() {
         <Button variant="ghost" size="icon" className="md:hidden">
           < HamburgerMenuIcon />
         </Button>
-
       </DropdownMenuTrigger>
-      <DropdownMenuContent className="w-56">
-        <DropdownMenuGroup>
-          <a href="#experience">
-            <DropdownMenuItem>
-              Experience
-            </DropdownMenuItem>
-          </a>
+      <DropdownMenuContent>
 
-          <a href="#works">
-            <DropdownMenuItem>
-              Works
-            </DropdownMenuItem>
-          </a>
-
-          {/* <a href="#contact">
-            <DropdownMenuItem>
-              Contact
-            </DropdownMenuItem>
-          </a> */}
-
-          <a href="">
-            <DropdownMenuItem>
-              CV
-            </DropdownMenuItem>
-          </a>
-        </DropdownMenuGroup>
+        {navigation.map((menuItem) => {
+          return (
+            <DropdownMenuItem key={menuItem.name}>
+              <Link href={menuItem.href}>
+                <a>{menuItem.name}</a>
+              </Link>            </DropdownMenuItem>
+          );
+        })}
       </DropdownMenuContent>
-    </DropdownMenu>
-  )
+    </DropdownMenu>);
 }
 

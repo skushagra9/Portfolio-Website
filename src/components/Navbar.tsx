@@ -25,9 +25,9 @@ export function Navbar() {
           <Button variant="link">Works</Button>
         </a>
 
-        {/* <a href="#contact">
+        <a href="#contact">
           <Button variant="link">Contact</Button>
-        </a> */}
+        </a>
         <Button
           onClick={() =>
             window.open(

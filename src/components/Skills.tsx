@@ -2,7 +2,7 @@ export const Skills = () => {
   return (
     <div className="w-full px-8 md:w-1/2 lg:w-1/3 md:p-0">
       <span className="text-indigo-900 dark:text-indigo-300 font-bold">
-        Skills
+        🚀 Skills
       </span>
       <ul className="mt-0 ml-1 dark:text-gray-300">
         <li>Languages - Javascript, Typescript, Python</li>
