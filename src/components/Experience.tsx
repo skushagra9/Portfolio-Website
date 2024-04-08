@@ -2,7 +2,7 @@ import { Experience } from "@/constants/Experience";
 
 export const Exp = () => {
   return (
-    <section id="experience" className="flex flex-col w-full md:w-1/2 text-center mt-12">
+    <section id="experience" className="flex flex-col w-full md:w-1/2 text-center mt-12 px-8 md:p-0">
       <p className="text-indigo-900 dark:text-indigo-300 font-bold ">
         📚 Experience
       </p>
