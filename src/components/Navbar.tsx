@@ -31,7 +31,7 @@ export function Navbar() {
         <Button
           onClick={() =>
             window.open(
-              "https://drive.google.com/file/d/1pdSCNN5qCNnyOkYpSdRXeb3i2PwXX8QK/view?usp=sharing"
+              "https://drive.google.com/file/d/1vycpGZsvlc323h5-NOUBFUqBwE1p0nYl/view?usp=sharing"
             )
           }
           variant="link"

@@ -5,10 +5,14 @@ export const data = [
   { name: "RedisWS-Hub", description: "🚀 Real-time comms with Redis pub/sub & WebSocket! Connect & stay updated in a flash! ", stars: 1, language: "TypeScript", link: "https://github.com/skushagra9/RedisWS-Hub" },
   { name: "Scalable System", description: "🚀 Scalable System: Critical tasks sync, async optimized with BullMQ. Segmented servers, rate limiting – power for seamless performance!", stars: 1, language: "TypeScript", link: "https://github.com/skushagra9/Scalable-System" },
   //  { name: "ELearning-AI", description: "Description", stars: 1, language: "TypeScript", link: "https://github.com/skushagra9/E-Learning-AI" },
+  { name: "Neovim Essentials", description: "Empower your Neovim setup with handpicked plugins and a ninja-worthy keymap for lightning-fast coding! ⚡️ ", stars: 1, language: "TypeScript", link: "https://github.com/skushagra9/Neovim-Essentials" },
+
   { name: "Portfolio Website", description: "🚀 Crafting digital experiences with passion! Explore my projects and journey in tech. Let's connect and create together! 👩‍💻✨ ", stars: 1, language: "TypeScript", link: "https://github.com/skushagra9/Portfolio-Website" },
-  { name: "Linkedin Automated Applier Bot", description: "🚀 Elevate your LinkedIn with our automated bot script! 💼 Level up with automation! ", stars: 1, language: "Python", link: "https://github.com/skushagra9/Linkedin-Automated-Job-Applier" },
+
   { name: "Solana Breeze", description: "🌟 Your Premier Destination for Exclusive Solana Airdrops! 🚀 ", stars: 1, language: "TypeScript", link: "https://github.com/skushagra9/Solana-Breeze" },
   { name: "Stackwise", description: "Contribution- Added Stack- OpenAI streaming with Langchain", stars: 1, language: "TypeScript", link: "https://github.com/stackwiseai/stackwise/pull/102" },
+  { name: "Linkedin Automated Applier Bot", description: "🚀 Elevate your LinkedIn with our automated bot script! 💼 Level up with automation! ", stars: 1, language: "Python", link: "https://github.com/skushagra9/Linkedin-Automated-Job-Applier" },
+
   { name: "Course Selling App", description: "Empower your education journey with our modern course-selling app! 🚀 ", stars: 1, language: "TypeScript", link: "https://github.com/skushagra9/course-selling" },
   // { name: "FlappyBird", description: "Experience the thrill of flight with our addictive Flappy Bird-inspired game! 🐦 Tap to soar through obstacles, test your reflexes, and aim for new high scores. 🏆 Dive into endless fun and challenge your friends to beat your best! Ready to flap to the top? Let's fly together! 🚀", stars: 1, language: "TypeScript", link: "https://github.com/skushagra9/FlappyBird" },
   // { name: "FlappyBird Multiplayer", description: "Take flight with friends in our multiplayer Flappy Bird game! 🐦 Compete in real-time, flap through obstacles, and race to the top of the leaderboard. 🏆 Team up or go solo for epic aerial adventures. Join the flock and see who's the ultimate flapper! Ready to soar together? Let's flap and conquer! 🚀", stars: 1, language: "TypeScript", link: "https://example.com/project4" },
