@@ -1,9 +1,19 @@
 export const Experience = [
   {
     year: 2024,
+    timeline: "May (Present)",
+    title: {
+      name: "Filament Finance",
+      cargo: "Full Stack Developer (Remote)",
+    },
+    description: `Managing the Frontend, Backend and Smartcontract Integrations`,
+    details: ["NextJs, Typescript, NodeJs, Solidity, AWS, Shell Scripting, Java"],
+  },
+  {
+    year: 2024,
     timeline: "February-April",
     title: {
-      name: "Stealth Startup",
+      name: "Archie AI",
       cargo: "Full Stack Developer (Remote)",
     },
     description: `Owned the Frontend - NextJs, Database-Prisma, Authentication compeletely`,

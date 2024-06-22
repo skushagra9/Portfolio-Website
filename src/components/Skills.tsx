@@ -5,12 +5,12 @@ export const Skills = () => {
         🚀 Skills
       </span>
       <ul className="mt-0 ml-1 dark:text-gray-300">
-        <li>Languages - Javascript, Typescript, Python</li>
+        <li>Languages - Rust, Cairo, Javascript, Typescript, Java, Solidity, Python</li>
         <li>FRONTEND - NextJs14, React, VueJs, Tailwind CSS</li>
         <li>BACKEND - NodeJs, Trpc, GraphQL</li>
         <li>DevOps - Git, Terraform, Docker, Kubernetes, AWS</li>
         <li>DATABASE - MySQL, Prisma, PostgreSQL</li>
-        <li>AI - Langchain, OpenApI</li>
+        <li>AI TECH - Langchain, OpenApI</li>
       </ul>
     </div>
   );
