@@ -6,7 +6,11 @@ export const Experience = [
       name: "Filament Finance",
       cargo: "Full Stack Developer (Remote)",
     },
-    description: `Managing the Frontend, Backend and Smartcontract Integrations`,
+    description: [`Led the integration of frontend and backend components with smart contracts to ensure seamless communication and
+functionality.`
+      , `Developed and maintained a robust architecture for efficient data flow and user interaction.`
+      , `Collaborated with cross-functional teams to optimize system performance and user experience.`
+      , `Utilized modern frameworks and tools to streamline development processes and enhance application reliability`],
     details: ["NextJs, Typescript, NodeJs, Solidity, AWS, Shell Scripting, Java"],
   },
   {
@@ -16,7 +20,9 @@ export const Experience = [
       name: "Archie AI",
       cargo: "Full Stack Developer (Remote)",
     },
-    description: `Owned the Frontend - NextJs, Database-Prisma, Authentication compeletely`,
+    description: [`Led frontend development using Next.js and TypeScript, ensuring a responsive and user-friendly interface.`
+      , `    Managed database operations with Prisma and implemented robust authentication mechanisms.`
+      , `     Integrated OpenAI and deployed services on Google Cloud Platform (GCP) using a monorepo setup.`],
     details: ["NextJs, Typescript, Monorepo, OpenAI, GCP, NodeJs"],
   },
   {
@@ -26,11 +32,10 @@ export const Experience = [
       name: "VMCO",
       cargo: "Remote FullStack Developer(Intern)",
     },
-    description: `
-    Improved and corrected existing software and system applications.
-    Produced high-quality code artifacts that conformed to standards and best practices.
-    Conferred with project managers and other stakeholders to fully understand software design specifications and plan optimal development approaches.
-  `,
+    description: [`
+    Improved and corrected existing software and system applications.`, `
+Produced high-quality code artifacts that conformed to standards and best practices.`,
+      ` Conferred with project managers and other stakeholders to fully understand software design specifications and plan optimal development approaches.`],
     details: ["ReactJs", "ExpressJs", "Typescript"],
   },
 ]

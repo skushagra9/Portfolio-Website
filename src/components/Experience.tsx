@@ -10,20 +10,19 @@ export const Exp = () => {
       {Experience.map((e) => (
         <div key={e.year} className="flex flex-col items-center justify-start ">
           <div className="line"></div>
-          <span className="font-bold">{e.timeline} ({e.year}): </span>
+          <span className="font-bold"> {e.title.name}</span>
+          <span>{e.title.cargo}</span>
           <span>
-            {e.title.cargo} at {e.title.name}
-          </span>
+            {e.timeline} ({e.year})  </span>
 
           <div className="w-2/3 dark:text-gray-300">
             <br />
-            {e.description.split('\n').map((item, index) => (
+            {e.description.map((item, index) => (
               <span key={index}>
                 {item.trim()}
               </span>
             ))}
           </div>
-          <br />
           <div className="font-semibold">
             {e.details.join(', ')}
           </div>
