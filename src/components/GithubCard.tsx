@@ -21,7 +21,7 @@ interface DemoGithubProps {
 export function DemoGithub({ name, description, stars, language, link }: DemoGithubProps) {
   return (
     <Card>
-      <CardHeader className="grid items-start gap-4 space-y-0">
+      <CardHeader className="grid items-start gap-4 space-y-0 h-[200px]">
         <div className="space-y-1">
           <CardTitle>{name}</CardTitle>
           <CardDescription>
