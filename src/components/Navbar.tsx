@@ -7,6 +7,7 @@ import {
   TwitterLogoIcon,
   LinkedInLogoIcon,
   DiscordLogoIcon,
+  PaperPlaneIcon
 } from "@radix-ui/react-icons";
 import { useTheme } from "next-themes";
 import { DropdownMenuDemo } from "./dropDownMenu";
@@ -86,6 +87,15 @@ export function Navbar() {
           size="icon"
         >
           <DiscordLogoIcon />
+        </Button>
+        <Button
+          onClick={() =>
+            window.open("https://t.me/kushagra123987")
+          }
+          variant="ghost"
+          size="icon"
+        >
+          <PaperPlaneIcon />
         </Button>
       </div>
     </div>
