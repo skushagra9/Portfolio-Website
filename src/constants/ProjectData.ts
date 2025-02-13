@@ -151,7 +151,7 @@ export const liveProjectsData = [
 
   {
     name: "Flashduels",
-    description: "OnChain Predictions Market",
+    description: "Decentralized prediction market with transparent bets, instant payouts, and verifiable outcomes.",
     liveLink: "https://flashduels.vercel.com",
     imageLink: "flashduels-portfolio.png",
   },
@@ -223,4 +223,5 @@ export const openSourceContributions = [
     liveLink:" chess.100xdevs.com/ ",
     imageLink:"chess.png"
   },
+  
 ]

@@ -16,7 +16,7 @@ export default function Project() {
   ];
 
   return (
-    <div id="projects" className="max-w-screen-lg mx-auto mt-16 flex flex-col items-center gap-y-8">
+    <div id="projects" className="max-w-screen-2xl mx-auto mt-16 flex flex-col items-center gap-y-8">
       <span className="text-indigo-900 dark:text-indigo-300 font-bold">🌟 Projects</span>
       
       {/* Filter Buttons */}
@@ -27,7 +27,7 @@ export default function Project() {
             onClick={() => setActiveFilter(button.value as any)}
             className={`px-4 py-2 rounded-lg transition-colors ${
               activeFilter === button.value
-                ? 'bg-indigo-600 text-white'
+                ? 'bg-indigo-300 text-black'
                 : 'bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700'
             }`}
           >
@@ -40,7 +40,7 @@ export default function Project() {
       <div className="w-full">
         <div className="flex flex-wrap justify-center gap-4 md:gap-6 lg:gap-8">
           {activeFilter === 'live' && liveProjectsData.map((item, index) => (
-            <div key={`live-${index}`} className="w-full px-8 sm:w-1/3 sm:p-0 md:w-1/3 md:p-0">
+            <div key={`live-${index}`} className="w-full px-8 sm:w-1/3 sm:p-0 md:w-1/4 md:p-0">
               <ProjectCard
                 name={item.name}
                 description={item.description}
@@ -52,7 +52,7 @@ export default function Project() {
           
           {(activeFilter === 'opensource') && 
             openSourceContributions.map((item, index) => (
-              <div key={`opensource-${index}`} className="w-full px-8 sm:w-1/3 sm:p-0 md:w-1/3 md:p-0">
+              <div key={`opensource-${index}`} className="w-full px-8 sm:w-1/3 sm:p-0 md:w-1/4 md:p-0">
                 <ProjectCard
                   name={item.name}
                   description={item.description}
