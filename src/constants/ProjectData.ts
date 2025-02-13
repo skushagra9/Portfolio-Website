@@ -166,7 +166,7 @@ export const liveProjectsData = [
     name: "NFT Minting Dapp",
     description:
       "This project enables users to seamlessly verify their identity via email and claim NFTs without any cost. Designed for scalability and efficiency, it ensures a smooth user experience while maintaining security. ",
-    imageLink: "neovim.png",
+    imageLink: "nftmint.png",
     liveLink: "https://nft.skushagra9.in",
   },
   {
