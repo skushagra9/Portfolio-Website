@@ -52,7 +52,7 @@ export function ProjectCard({
         </Button>
        {contributionLink && <Button
           variant="link"
-          onClick={() => window.open(liveLink, "_blank")}
+          onClick={() => window.open(contributionLink, "_blank")}
           className="flex items-center space-x-2 dark:text-indigo-300 dark:hover:text-indigo-500 text-indigo-500 hover:text-indigo-900"
         >
           <Link1Icon className="h-4 w-4" />

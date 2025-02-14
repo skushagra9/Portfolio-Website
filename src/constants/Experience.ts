@@ -6,12 +6,19 @@ export const Experience = [
       name: "Filament Finance",
       cargo: "Full Stack Developer (Remote)",
     },
-    description: [`Led the integration of frontend and backend components with smart contracts to ensure seamless communication and
-functionality.`
-      , `Developed and maintained a robust architecture for efficient data flow and user interaction.`
-      , `Collaborated with cross-functional teams to optimize system performance and user experience.`
-      , `Utilized modern frameworks and tools to streamline development processes and enhance application reliability`],
-    details: ["NextJs, Typescript, NodeJs, Solidity, AWS, Shell Scripting, Java"],
+    description: [
+      `Founding member of the team, actively shaped the product from the ground up.`,
+      `Developed the entire frontend of https://app.filament.finance.`,
+      `Built the authentication system, implementing Account Abstraction similar to Biconomy.`,
+      `Designed and deployed a 7-tier microservice architecture on Kubernetes, ensuring scalability.`,
+      ` Developed https://flashduels.vercel.app, an options betting platform, handling both frontend and backend from scratch.
+`,
+      `Built a Telegram Mini-App for the Filament Pro application.
+`,
+    ],
+    details: [
+      "NextJs, Typescript, Docker, Kubernetes, Prometheus, NodeJs, Solidity, AWS, Shell Scripting, Java",
+    ],
   },
   {
     year: 2024,
@@ -20,9 +27,14 @@ functionality.`
       name: "Archie AI",
       cargo: "Full Stack Developer (Remote)",
     },
-    description: [`Led frontend development using Next.js and TypeScript, ensuring a responsive and user-friendly interface.`
-      , `    Managed database operations with Prisma and implemented robust authentication mechanisms.`
-      , `     Integrated OpenAI and deployed services on Google Cloud Platform (GCP) using a monorepo setup.`],
+    description: [
+      `Designed the entire system architecture, including Database Design and Vector DB mappings.
+`,
+      `  Developed the frontend, creating an interface similar to ChatGPT for interacting with the codebase.
+`,
+      `    Integrated GitHub APIs, enabling a scalable and robust chat system for code interaction.
+`,
+    ],
     details: ["NextJs, Typescript, Monorepo, OpenAI, GCP, NodeJs"],
   },
   {
@@ -32,10 +44,13 @@ functionality.`
       name: "VMCO",
       cargo: "Remote FullStack Developer(Intern)",
     },
-    description: [`
-    Improved and corrected existing software and system applications.`, `
+    description: [
+      `
+    Improved and corrected existing software and system applications.`,
+      `
 Produced high-quality code artifacts that conformed to standards and best practices.`,
-      ` Conferred with project managers and other stakeholders to fully understand software design specifications and plan optimal development approaches.`],
+      ` Conferred with project managers and other stakeholders to fully understand software design specifications and plan optimal development approaches.`,
+    ],
     details: ["ReactJs", "ExpressJs", "Typescript"],
   },
-]
+];

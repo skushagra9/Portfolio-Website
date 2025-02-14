@@ -40,7 +40,6 @@ export const devToolsData = [
     link: "https://github.com/skushagra9/Notion-Whatsapp-AI",
   },
 
-
   {
     name: "Zerodha Algo",
     description: "Basic Implementation of Zerodha Trading System Algorithm",
@@ -58,9 +57,7 @@ export const devToolsData = [
     link: "https://github.com/skushagra9/Whatsapp-AI-Bot",
   },
 
-
   // { name: "Youtube WhatsApp AI", description: "🚀 Level up your YouTube content effortlessly! Drop your ideas in WhatsApp, let the AI work its magic for thumbnails and titles, seamlessly synced for success! 📲✨ ", stars: 1, language: "TypeScript", link: "https://github.com/skushagra9/Youtube-Whatsapp-AI" },
- 
 
   {
     name: "Scalable System",
@@ -72,13 +69,6 @@ export const devToolsData = [
   },
 
   //  { name: "ELearning-AI", description: "Description", stars: 1, language: "TypeScript", link: "https://github.com/skushagra9/E-Learning-AI" },
-
-
-
-
-
- 
-
 
   {
     name: "Linkedin Automated Applier Bot",
@@ -112,7 +102,6 @@ export const devToolsData = [
 ];
 
 export const learningProjectsData = [
-
   {
     name: "Solana Breeze",
     description:
@@ -137,8 +126,7 @@ export const learningProjectsData = [
     language: "Solidity",
     link: "https://github.com/skushagra9/EtherPayChain",
   },
-
-]
+];
 
 export const liveProjectsData = [
   {
@@ -151,7 +139,8 @@ export const liveProjectsData = [
 
   {
     name: "Flashduels",
-    description: "Decentralized prediction market with transparent bets, instant payouts, and verifiable outcomes.",
+    description:
+      "Decentralized prediction market with transparent bets, instant payouts, and verifiable outcomes.",
     liveLink: "https://flashduels.vercel.com",
     imageLink: "flashduels-portfolio.png",
   },
@@ -191,7 +180,6 @@ export const liveProjectsData = [
     imageLink: "portfolio.png",
     liveLink: "https://skushagra9.in/",
   },
- 
 ];
 
 export const openSourceContributions = [
@@ -199,29 +187,33 @@ export const openSourceContributions = [
     name: "Uninbox",
     description: "",
     contributionLink: "https://github.com/stackwiseai/stackwise/pull/102",
-    liveLink:"https://uninbox.com/",
-    imageLink:"uninbox.png"
+    liveLink: "https://uninbox.com/",
+    imageLink: "uninbox.png",
   },
   {
     name: "OpenStatus",
     description: "",
-    contributionLink: "https://github.com/openstatusHQ/openstatus/commits/main/?author=skushagra9",
-    liveLink:"https://www.openstatus.dev/",
-    imageLink:"openstatus.png"
+    contributionLink:
+      "https://github.com/openstatusHQ/openstatus/commits/main/?author=skushagra9",
+    liveLink: "https://www.openstatus.dev/",
+    imageLink: "openstatus.png",
   },
   {
     name: "Stackwise",
-    description: "Added a new Stack - Chat with OpenAI Streaming response, and added Vercel edge function for OpenAI response streaming.",
-    contributionLink: "https://github.com/stackwiseai/stackwise/commits/main/?author=skushagra9",
-    liveLink:"https://www.stackwise.ai/stacks",
-    imageLink:"stackwise.png"
+    description:
+      "Added a new Stack - Chat with OpenAI Streaming response, and added Vercel edge function for OpenAI response streaming.",
+    contributionLink:
+      "https://github.com/stackwiseai/stackwise/commits/main/?author=skushagra9",
+    liveLink: "https://www.stackwise.ai/stacks",
+    imageLink: "stackwise.png",
   },
   {
     name: "Chess",
-    description: "Added Prometheus Grafana Monitoring Stack + Revamped Frontend Design, and added Shadcn UI",
-    contributionLink: "https://github.com/code100x/chess/commits/main/?author=skushagra9",
-    liveLink:" chess.100xdevs.com/ ",
-    imageLink:"chess.png"
+    description:
+      "Added Prometheus Grafana Monitoring Stack + Revamped Frontend Design, and added Shadcn UI",
+    contributionLink:
+      "https://github.com/code100x/chess/commits/main/?author=skushagra9",
+    liveLink: "http://chess.100xdevs.com ",
+    imageLink: "chess.png",
   },
-  
-]
+];

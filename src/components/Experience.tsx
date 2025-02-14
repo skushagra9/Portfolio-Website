@@ -15,15 +15,15 @@ export const Exp = () => {
           <span>
             {e.timeline} ({e.year})  </span>
 
-          <div className="w-2/3 dark:text-gray-300">
+          <div className="w-2/3 dark:text-gray-300 text-left">
             <br />
             {e.description.map((item, index) => (
-              <span key={index}>
-                {item.trim()}
-              </span>
+              <li className="mt-2" key={index}>
+                {item}
+              </li>
             ))}
           </div>
-          <div className="font-semibold">
+          <div className="font-semibold mt-2">
             {e.details.join(', ')}
           </div>
         </div>
