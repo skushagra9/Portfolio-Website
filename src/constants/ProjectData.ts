@@ -192,7 +192,7 @@ export const openSourceContributions = [
   },
   {
     name: "OpenStatus",
-    description: "",
+    description: "I contributed by solving error codes, fixing tests, and adding endpoint test coverage. I also handled incidents, fixed empty data issues in notifications, and improved motion handling in the Globe component. These contributions enhanced code reliability, UI performance, and overall project stability, ensuring a smoother experience for users. 🚀",
     contributionLink:
       "https://github.com/openstatusHQ/openstatus/commits/main/?author=skushagra9",
     liveLink: "https://www.openstatus.dev/",
