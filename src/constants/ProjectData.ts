@@ -185,7 +185,7 @@ export const liveProjectsData = [
 export const openSourceContributions = [
   {
     name: "Uninbox",
-    description: "",
+    description: "I contributed to UninBox by enhancing the OSS-Friends Page, improving avatar storage, updating the domain details page with NuxtUI, and ensuring avatars refresh properly. I also enabled new profile creation for users joining orgs and standardized User/Project ID types for better consistency. Overall, I improved UI/UX and data handling. 🚀",
     contributionLink: "https://github.com/stackwiseai/stackwise/pull/102",
     liveLink: "https://uninbox.com/",
     imageLink: "uninbox.png",
