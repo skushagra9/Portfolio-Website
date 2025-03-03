@@ -145,6 +145,13 @@ export const liveProjectsData = [
     imageLink: "flashduels-portfolio.png",
   },
   {
+    name: "0xPay",
+    description:
+      "0xpay enables merchants to receive payments in usdc , and users to pay in any token on solana network using jupiter swap. The goal is to create a seamless user expereince and create a defi gateway that can be easily integrated into web2 and web3 e-commerce apps and websites",
+    liveLink: "https://0xpay.framer.website/",
+    imageLink: "payments.png",
+  },
+  {
     name: "ArchieAI",
     description:
       "Get stated with your AI engineer - understand codebase, make automated commit, and accelerate code reviews",
