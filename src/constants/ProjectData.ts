@@ -16,6 +16,14 @@ export const devToolsData = [
     link: "https://github.com/skushagra9/rns",
   },
   {
+    name: "Mouse Tracker",
+    description:
+      "MouseTracker is a Rust application that monitors mouse movements across the entire screen. It allows users to start a task and captures mouse activity, storing the data for further analysis.",
+    stars: 1,
+    language: "Rust",
+    link: "https://github.com/skushagra9/Mouse-Tracker",
+  },
+  {
     name: "RAG System - Superteam Vietnam AI Assistant",
     description:
       "This project introduces an AI-powered solution to automate, enhance, and streamline content creation, management, and interactions.",
