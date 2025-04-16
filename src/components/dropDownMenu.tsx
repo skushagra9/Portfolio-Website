@@ -14,7 +14,7 @@ const navigation = [
   { name: "Experience", href: "#experience" },
   { name: "Works", href: "#projects" },
   { name: "Contact", href: "#contact" },
-  { name: "CV", href: "https://drive.google.com/file/d/1jz-0PNa_LOd2rrwYJGqva9BP3AsTcQhz/view?usp=sharing" },
+  { name: "CV", href: "https://drive.google.com/file/d/1qU2RJgQ531AUMTt5oQHh41WZxyFqqp6l/view?usp=sharing" },
 ];
 
 export function DropdownMenuDemo() {

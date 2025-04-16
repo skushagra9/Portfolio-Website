@@ -8,6 +8,14 @@ export const devToolsData = [
     link: "https://github.com/skushagra9/RedisWS-Hub",
   },
   {
+    name: "Mouse Tracker",
+    description:
+      "MouseTracker is a Rust application that monitors mouse movements across the entire screen. It allows users to start a task and captures mouse activity, storing the data for further analysis.",
+    stars: 1,
+    language: "Rust",
+    link: "https://github.com/skushagra9/Mouse-Tracker",
+  },
+  {
     name: "RNS",
     description:
       "This project demonstrates deploying a Node.js To-Do application to Google Cloud Run, backed by a Cloud SQL PostgreSQL database, using Terraform for infrastructure management.",
@@ -141,7 +149,7 @@ export const liveProjectsData = [
     name: "Filament Finance Pro",
     description:
       "Decentralised Perpetual Exchange Focused on Liquidity Efficiency and Asset Accessibility",
-    liveLink: "https://app.filament.finance",
+    liveLink: "https://filament.finance",
     imageLink: "filament-pro.png",
   },
 
@@ -149,7 +157,7 @@ export const liveProjectsData = [
     name: "Flashduels",
     description:
       "Decentralized prediction market with transparent bets, instant payouts, and verifiable outcomes.",
-    liveLink: "https://flashduels.vercel.com",
+    liveLink: "https://flashduels.xyz",
     imageLink: "flashduels-portfolio.png",
   },
   {

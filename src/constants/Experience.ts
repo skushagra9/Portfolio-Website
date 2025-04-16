@@ -8,13 +8,13 @@ export const Experience = [
     },
     description: [
       `Founding member of the team, actively shaped the product from the ground up.`,
-      `Developed the entire frontend of https://app.filament.finance.`,
+      `Have handled the multi-cluster orderbook backend, implemented authentication flow, cache, reduced (95%) latency on
+orders, from 2000ms to 84ms`,
+      `Developed the client interface for Filament's Perp DEX (https://filament.finance)`,
       `Built the authentication system, implementing Account Abstraction similar to Biconomy.`,
       `Designed and deployed a 7-tier microservice architecture on Kubernetes, ensuring scalability.`,
-      ` Developed https://flashduels.vercel.app, an options betting platform, handling both frontend and backend from scratch.
-`,
-      `Built a Telegram Mini-App for the Filament Pro application.
-`,
+      ` Developed https://flashduels.xyz, an options betting platform, handling both frontend and backend from scratch.`,
+      `Built a Telegram Mini-App for the Filament Pro application.`,
     ],
     details: [
       "NextJs, Typescript, Docker, Kubernetes, Prometheus, NodeJs, Solidity, AWS, Shell Scripting, Java",
