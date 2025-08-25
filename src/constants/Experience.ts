@@ -7,7 +7,7 @@ export const Experience = [
       cargo: "Software Engineer",
     },
     description: [
-      `Lead and manage the development of Absinthe Adapters (https://github.com/absinthelabs/absinthe-adapters), a scalable blockchain indexing platform supporting 15+ DeFi protocols across 6 major networks.`,
+      `Lead and manage the development of <a href="https://github.com/absinthelabs/absinthe-adapters" target="_blank" rel="noopener noreferrer">Absinthe Adapters</a>, a scalable blockchain indexing platform supporting 15+ DeFi protocols across 6 major networks.`,
       `Architected real-time analytics for liquidity, swaps, staking, and bonding curves, integrating advanced time-weighted balance calculations and price feeds.`,
     ],
     details: [
@@ -15,8 +15,8 @@ export const Experience = [
     ],
   },
   {
-    year: 2024-2025,
-    timeline: "May-April",
+    year: 2025,
+    timeline: "May 2024 - April 2025",
     title: {
       name: "Filament Finance",
       cargo: "Full Stack Developer (Remote)",
