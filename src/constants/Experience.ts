@@ -7,7 +7,7 @@ export const Experience = [
       cargo: "Software Engineer",
     },
     description: [
-      `Lead and manage the development of <a href="https://github.com/absinthelabs/absinthe-adapters" target="_blank" rel="noopener noreferrer">Absinthe Adapters</a>, a scalable blockchain indexing platform supporting 15+ DeFi protocols across 6 major networks.`,
+      `Lead and manage the development of [Absinthe Adapters](https://github.com/absinthelabs/absinthe-adapters), a scalable blockchain indexing platform supporting 15+ DeFi protocols across 6 major networks.`,
       `Architected real-time analytics for liquidity, swaps, staking, and bonding curves, integrating advanced time-weighted balance calculations and price feeds.`,
     ],
     details: [
@@ -25,10 +25,10 @@ export const Experience = [
       `Founding member of the team, actively shaped the product from the ground up.`,
       `Have handled the multi-cluster orderbook backend, implemented authentication flow, cache, reduced (95%) latency on
 orders, from 2000ms to 84ms`,
-      `Developed the client interface for Filament's Perp DEX (https://filament.finance)`,
+      `Developed the client interface for [Filament Finance Perp DEX](https://filament.finance)`,
       `Built the authentication system, implementing Account Abstraction similar to Biconomy.`,
       `Designed and deployed a 7-tier microservice architecture on Kubernetes, ensuring scalability.`,
-      ` Developed https://flashduels.xyz, an options betting platform, handling both frontend and backend from scratch.`,
+      ` Developed [Flash Duels](https://flashduels.xyz), an options betting platform, handling both frontend and backend from scratch.`,
       `Built a Telegram Mini-App for the Filament Pro application.`,
     ],
     details: [
