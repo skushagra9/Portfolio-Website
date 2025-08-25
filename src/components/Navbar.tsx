@@ -32,7 +32,7 @@ export function Navbar() {
         <Button
           onClick={() =>
             window.open(
-              "https://drive.google.com/file/d/1qOnh-HpG4tzt0UIo99rydsHzRIEgeIqx/view?usp=sharing"
+              "https://drive.google.com/file/d/1CebeidNGD_8eMcPohDhvgdDAnWW7m8rA/view?usp=sharing"
             )
           }
           variant="link"
@@ -62,7 +62,7 @@ export function Navbar() {
           <GitHubLogoIcon />
         </Button>
         <Button
-          onClick={() => window.open("https://twitter.com/skushagrasharma")}
+          onClick={() => window.open("https://twitter.com/skushagra9")}
           variant="ghost"
           size="icon"
         >
@@ -71,7 +71,7 @@ export function Navbar() {
         <Button
           onClick={() =>
             window.open(
-              "https://www.linkedin.com/in/kushagra-sharma-914b17213/"
+              "https://www.linkedin.com/in/skushagra9/"
             )
           }
           variant="ghost"
@@ -90,7 +90,7 @@ export function Navbar() {
         </Button>
         <Button
           onClick={() =>
-            window.open("https://t.me/kushagra123987")
+            window.open("https://t.me/skushagra9")
           }
           variant="ghost"
           size="icon"
