@@ -1,10 +1,7 @@
 "use client"
 
-import { Card, CardHeader, CardContent, CardTitle, CardDescription } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
 import { Link1Icon } from "@radix-ui/react-icons"
 import Image from "next/image"
-import React from "react"
 
 interface ProjectCardProps {
   name: string
@@ -22,43 +19,50 @@ export function ProjectCard({
   contributionLink,
 }: ProjectCardProps) {
   return (
-    <Card className="relative overflow-hidden rounded-lg shadow transition-all duration-300 hover:shadow-lg hover:scale-105">
-      {/* Project Image */}
-      <div className="relative w-full h-48 bg-gray-200">
+    <div className="group h-full rounded-xl border border-border bg-card overflow-hidden transition-all duration-200 hover:border-primary/30 hover:shadow-md hover:shadow-primary/5">
+      <div className="relative w-full h-44 bg-muted overflow-hidden">
         <Image
           src={imageUrl}
           alt={`${name} preview`}
           fill
-          className="object-cover object-center"
+          className="object-cover object-center transition-transform duration-300 group-hover:scale-105"
           sizes="(max-width: 768px) 100vw, 400px"
         />
       </div>
 
-      {/* Card Content */}
-      <CardHeader>
-        <CardTitle className="text-lg font-semibold">{name}</CardTitle>
-        <CardDescription className="line-clamp-2">
-          {description}
-        </CardDescription>
-      </CardHeader>
-      <CardContent>
-        <Button
-          variant="link"
-          onClick={() => window.open(liveLink, "_blank")}
-          className="flex items-center space-x-2 dark:text-indigo-300 dark:hover:text-indigo-500 text-indigo-500 hover:text-indigo-900"
-        >
-          <Link1Icon className="h-4 w-4" />
-          <span>Live Demo</span>
-        </Button>
-       {contributionLink && <Button
-          variant="link"
-          onClick={() => window.open(contributionLink, "_blank")}
-          className="flex items-center space-x-2 dark:text-indigo-300 dark:hover:text-indigo-500 text-indigo-500 hover:text-indigo-900"
-        >
-          <Link1Icon className="h-4 w-4" />
-          <span>Contribution</span>
-        </Button>}
-      </CardContent>
-    </Card>
+      <div className="p-5 space-y-3">
+        <div className="space-y-1.5">
+          <h3 className="font-[family-name:var(--font-display)] font-semibold text-card-foreground">
+            {name}
+          </h3>
+          <p className="text-sm text-muted-foreground leading-relaxed line-clamp-2">
+            {description}
+          </p>
+        </div>
+
+        <div className="flex items-center gap-3 pt-1">
+          <a
+            href={liveLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 text-sm font-medium text-primary hover:underline"
+          >
+            <Link1Icon className="h-3.5 w-3.5" />
+            Live Demo
+          </a>
+          {contributionLink && (
+            <a
+              href={contributionLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 text-sm font-medium text-muted-foreground hover:text-foreground hover:underline"
+            >
+              <Link1Icon className="h-3.5 w-3.5" />
+              Contribution
+            </a>
+          )}
+        </div>
+      </div>
+    </div>
   )
 }

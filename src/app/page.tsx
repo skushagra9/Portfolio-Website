@@ -7,14 +7,15 @@ import ContactForm from "@/components/Contact"
 
 export default function Home() {
   return (
-
-    <div className="flex flex-col items-center gap-y-12">
+    <div className="flex flex-col items-center">
       <Header />
-      <Introduction />
-      <Skills />
-      <Exp />
-      <Project />
-      <ContactForm />
+      <div className="flex flex-col items-center gap-y-24 w-full max-w-screen-lg mx-auto px-6 md:px-8 pb-24">
+        <Introduction />
+        <Skills />
+        <Exp />
+        <Project />
+        <ContactForm />
+      </div>
     </div>
   )
 }

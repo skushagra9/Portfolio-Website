@@ -1,17 +1,10 @@
 "use client"
-import { useState, useRef } from 'react'; // Add import for useRef
+import { useRef } from 'react';
 import { Label } from "@/components/ui/label";
-import { Input } from "./ui/input"; // Assuming Input component is imported from "./ui/input"
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Input } from "./ui/input";
 import { Button } from "./ui/button";
 import { useToast } from './ui/use-toast';
+import { FadeIn } from './FadeIn';
 
 const ContactForm = () => {
   const formRef = useRef<HTMLFormElement | null>(null);
@@ -37,7 +30,6 @@ const ContactForm = () => {
           description: data.message,
           variant: "error"
         })
-
         formRef.current?.reset();
       }
     } catch (error) {
@@ -46,66 +38,68 @@ const ContactForm = () => {
         description: "Please Try Again",
         variant: "error"
       })
-
       console.error(error)
     }
   };
 
   return (
-    <div id="contact" className="max-w-screen-lg mx-auto mt-16 px-8 md:p-0 flex flex-col items-center gap-y-4">
-      <span className="text-indigo-900 dark:text-indigo-300 font-bold">
-        📞 Contact Me
-      </span>
-      <div>
-        <Card>
+    <section id="contact" className="w-full max-w-lg">
+      <FadeIn>
+        <div className="space-y-8">
+          <div className="space-y-2 text-center">
+            <h2 className="font-[family-name:var(--font-display)] text-2xl font-bold tracking-tight">
+              Get in Touch
+            </h2>
+            <p className="text-sm text-muted-foreground">
+              Have a project in mind? Drop me a message.
+            </p>
+          </div>
+
           <form
             ref={formRef}
             onSubmit={handleSubmit}
+            className="space-y-4"
           >
-            <CardHeader>
-              <CardTitle className="icon_underline">Send me a mail.</CardTitle>
-              <CardDescription>
-                After submitting the form, a toast message will appear for you.
-              </CardDescription>
-            </CardHeader>
-            <CardContent>
-              <div className="grid w-full max-w-sm items-center gap-1.5 mt-2">
-                <Label htmlFor="name">Name</Label>
-                <Input
-                  type="text"
-                  name="name"
-                  required
-                  placeholder="Enter your name"
-                />
-              </div>
-              <div className="grid w-full max-w-sm items-center gap-1.5 mt-2">
-                <Label htmlFor="email">Email</Label>
-                <Input
-                  type="email"
-                  name="SenderEmail"
-                  required
-                  placeholder="Enter your email"
-                />
-              </div>
-              <div className="grid w-full max-w-sm items-center gap-1.5 mt-2">
-                <Label htmlFor="message">Your Message</Label>
-                <textarea
-                  placeholder="Your message here..."
-                  name="message"
-                  required
-                  className="resize-none flex min-h-[80px] w-full rounded-md bg-background dark:bg-indigo-100 px-3 py-2 text-sm text-black ring-offset-background dark:placeholder:text-muted focus-visible:outline-none focus-visible:ring-0 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                ></textarea>
-              </div>
-            </CardContent>
-            <CardFooter>
-              <Button type="submit" className="w-full" variant={"destructive"}>
-                Submit
-              </Button>
-            </CardFooter>
+            <div className="space-y-2">
+              <Label htmlFor="name" className="text-sm font-medium">Name</Label>
+              <Input
+                type="text"
+                name="name"
+                id="name"
+                required
+                placeholder="Your name"
+                className="bg-secondary/30 border-border"
+              />
+            </div>
+            <div className="space-y-2">
+              <Label htmlFor="email" className="text-sm font-medium">Email</Label>
+              <Input
+                type="email"
+                name="SenderEmail"
+                id="email"
+                required
+                placeholder="you@example.com"
+                className="bg-secondary/30 border-border"
+              />
+            </div>
+            <div className="space-y-2">
+              <Label htmlFor="message" className="text-sm font-medium">Message</Label>
+              <textarea
+                placeholder="What's on your mind?"
+                name="message"
+                id="message"
+                required
+                rows={4}
+                className="flex w-full rounded-lg border border-border bg-secondary/30 px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 resize-none"
+              />
+            </div>
+            <Button type="submit" className="w-full">
+              Send Message
+            </Button>
           </form>
-        </Card>
-      </div>
-    </div>
+        </div>
+      </FadeIn>
+    </section>
   );
 };
 

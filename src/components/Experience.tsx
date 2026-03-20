@@ -1,70 +1,92 @@
-import { Experience } from "@/constants/Experience";
+"use client";
 
-// Helper function to parse markdown-style links
-const parseMarkdownLinks = (text: string) => {
+import { Experience } from "@/constants/Experience";
+import { FadeIn } from "./FadeIn";
+import { ReactNode } from "react";
+
+const parseMarkdownLinks = (text: string): ReactNode[] => {
   const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g;
-  const parts = [];
+  const parts: ReactNode[] = [];
   let lastIndex = 0;
   let match;
 
   while ((match = linkRegex.exec(text)) !== null) {
-    // Add text before the link
     if (match.index > lastIndex) {
       parts.push(text.slice(lastIndex, match.index));
     }
-    
-    // Add the link
     parts.push(
-      <a 
-        key={match.index} 
-        href={match[2]} 
-        target="_blank" 
+      <a
+        key={match.index}
+        href={match[2]}
+        target="_blank"
         rel="noopener noreferrer"
-        className="text-indigo-600 dark:text-indigo-400 hover:text-indigo-800 dark:hover:text-indigo-300 underline"
+        className="text-primary hover:underline"
       >
         {match[1]}
       </a>
     );
-    
     lastIndex = linkRegex.lastIndex;
   }
-  
-  // Add remaining text
+
   if (lastIndex < text.length) {
     parts.push(text.slice(lastIndex));
   }
-  
+
   return parts.length > 0 ? parts : [text];
 };
 
 export const Exp = () => {
   return (
-    <section id="experience" className="flex flex-col w-full md:w-1/2 text-center mt-12 px-8 md:p-0">
-      <p className="text-indigo-900 dark:text-indigo-300 font-bold ">
-        📚 Experience
-      </p>
+    <section id="experience" className="w-full max-w-2xl">
+      <FadeIn>
+        <h2 className="font-[family-name:var(--font-display)] text-2xl font-bold tracking-tight mb-10">
+          Experience
+        </h2>
+      </FadeIn>
 
-      {Experience.map((e) => (
-        <div key={e.year} className="flex flex-col items-center justify-start ">
-          <div className="line"></div>
-          <span className="font-bold"> {e.title.name}</span>
-          <span>{e.title.cargo}</span>
-          <span>
-            {e.timeline} ({e.year})  </span>
+      <div className="relative">
+        <div className="absolute left-0 md:left-4 top-0 bottom-0 w-px bg-border" />
 
-          <div className="w-2/3 dark:text-gray-300 text-left">
-            <br />
-            {e.description.map((item, index) => (
-              <li className="mt-2" key={index}>
-                {parseMarkdownLinks(item)}
-              </li>
-            ))}
-          </div>
-          <div className="font-semibold mt-2">
-            {e.details.join(', ')}
-          </div>
+        <div className="space-y-12">
+          {Experience.map((e, i) => (
+            <FadeIn key={e.year + e.title.name} delay={i * 80}>
+              <div className="relative pl-8 md:pl-12">
+                <div className="absolute left-0 md:left-4 top-1.5 -translate-x-1/2 w-2.5 h-2.5 rounded-full border-2 border-primary bg-background" />
+
+                <div className="space-y-3">
+                  <div>
+                    <h3 className="font-[family-name:var(--font-display)] text-lg font-semibold">
+                      {e.title.name}
+                    </h3>
+                    <p className="text-sm text-muted-foreground">
+                      {e.title.cargo} &middot; {e.timeline} ({e.year})
+                    </p>
+                  </div>
+
+                  <ul className="space-y-2 text-sm text-muted-foreground leading-relaxed">
+                    {e.description.map((item, index) => (
+                      <li key={index} className="relative pl-4 before:absolute before:left-0 before:top-2 before:w-1.5 before:h-1.5 before:rounded-full before:bg-muted-foreground/30">
+                        {parseMarkdownLinks(item)}
+                      </li>
+                    ))}
+                  </ul>
+
+                  <div className="flex flex-wrap gap-1.5">
+                    {e.details.flatMap(d => d.split(', ')).map((tech) => (
+                      <span
+                        key={tech}
+                        className="inline-flex items-center rounded-md bg-secondary/50 border border-border px-2 py-0.5 text-xs font-medium text-muted-foreground"
+                      >
+                        {tech.trim()}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </FadeIn>
+          ))}
         </div>
-      ))}
+      </div>
     </section>
   );
 };
