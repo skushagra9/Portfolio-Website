@@ -7,8 +7,12 @@ export const Experience = [
       cargo: "Software Engineer",
     },
     description: [
-      `Lead and manage the development of [Absinthe Adapters](https://github.com/absinthelabs/absinthe-adapters), a scalable blockchain indexing platform supporting 15+ DeFi protocols across 6 major networks.`,
-      `Architected real-time analytics for liquidity, swaps, staking, and bonding curves, integrating advanced time-weighted balance calculations and price feeds.`,
+      `Led development of [Absinthe Adapters](https://github.com/absinthelabs/absinthe-adapters), a scalable multi-chain indexing platform (Morpho V1/V2, Uniswap V2/V3, Orca) for transactions and time-weighted balances, serving live customers in production.`,
+      `Optimized Orca indexer by replacing O(n×m) transfer scans with an event-driven pipeline (Mint-Tracker + Transfer-Watcher + external indexer), significantly reducing CPU usage and enabling near real-time indexing.`,
+      `Built Atlas, an AI-powered support engineer integrating Slack, Linear, and GitHub to autonomously triage issues, generate fixes, and open PRs, reducing CSM/support effort by 70%.`,
+      `Architected SybilGuard, a soulbound NFT-based reputation system using EIP-712 voucher signing, backend scoring (17+ signals), and full-stack minting flows with minimal on-chain state.`,
+      `Worked as a Forward Deployed Engineer, partnering with customers on live campaigns; built self-serve data and campaign flows enabling teams to configure tracking without engineering support.`,
+      `Built scalable identity backfill pipelines (PostgreSQL) using Union-Find for identity stitching, streaming/keyset reads, batched writes, and idempotent CLI tooling, enabling reliable large-scale backfills (incl. SybilGuard scoring).`,
     ],
     details: [
       "Typescript, Docker, Motherduck, NodeJs, Solidity, AWS",
