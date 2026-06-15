@@ -44,7 +44,7 @@ export function PageLoader() {
     >
       <div className="relative">
         <div className="text-6xl font-bold font-[family-name:var(--font-display)] text-primary animate-pulse">
-          KS
+          JS
         </div>
         {/* Glow effect layer behind the text */}
         <div className="absolute inset-0 blur-2xl bg-primary/20 animate-pulse" />
