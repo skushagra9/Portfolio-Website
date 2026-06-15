@@ -21,6 +21,8 @@ interface Comment {
   timestamp: string
   text: string
   replies: Reply[]
+  isEditing?: boolean
+  originalText?: string
 }
 
 // Mock data for initial comments
@@ -245,6 +247,63 @@ export function IssuePanel() {
     )
   }
 
+  // Handle edit top-level comment
+  const handleEditComment = (commentId: string, isEditing: boolean) => {
+    setComments((prevComments) =>
+      prevComments.map((comment) => {
+        if (comment.id === commentId) {
+          if (isEditing) {
+            return {
+              ...comment,
+              isEditing: true,
+              originalText: comment.text,
+            }
+          } else {
+            return {
+              ...comment,
+              isEditing: false,
+              originalText: undefined,
+            }
+          }
+        }
+        return comment
+      })
+    )
+  }
+
+  // Handle save edited top-level comment
+  const handleSaveComment = (commentId: string, newText: string) => {
+    setComments((prevComments) =>
+      prevComments.map((comment) => {
+        if (comment.id === commentId) {
+          return {
+            ...comment,
+            text: newText,
+            isEditing: false,
+            originalText: undefined,
+          }
+        }
+        return comment
+      })
+    )
+  }
+
+  // Handle cancel edit top-level comment
+  const handleCancelEditComment = (commentId: string) => {
+    setComments((prevComments) =>
+      prevComments.map((comment) => {
+        if (comment.id === commentId) {
+          return {
+            ...comment,
+            isEditing: false,
+            originalText: undefined,
+          }
+        }
+        return comment
+      })
+    )
+  }
+
   return (
     <Card className="w-full max-w-2xl mx-auto bg-card border border-border">
       <CardHeader className="border-b border-border">
@@ -284,17 +343,68 @@ export function IssuePanel() {
                         {comment.timestamp}
                       </span>
                     </div>
-                    <p className="text-sm text-foreground mt-2 leading-relaxed">
-                      {comment.text}
-                    </p>
-                    <button
-                      onClick={() =>
-                        handleReply(comment.id, comment.author)
-                      }
-                      className="text-xs text-primary hover:underline mt-2"
-                    >
-                      Reply
-                    </button>
+                    {comment.isEditing ? (
+                      <div className="mt-2 space-y-2">
+                        <textarea
+                          defaultValue={comment.originalText || comment.text}
+                          className="w-full rounded-md border border-border bg-background dark:bg-indigo-100 px-3 py-2 text-sm text-foreground resize-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                          rows={3}
+                          id={`edit-comment-${comment.id}`}
+                        />
+                        <div className="flex gap-2">
+                          <Button
+                            size="sm"
+                            variant="default"
+                            onClick={() => {
+                              const textarea = document.getElementById(
+                                `edit-comment-${comment.id}`
+                              ) as HTMLTextAreaElement
+                              handleSaveComment(
+                                comment.id,
+                                textarea.value
+                              )
+                            }}
+                          >
+                            Save
+                          </Button>
+                          <Button
+                            size="sm"
+                            variant="outline"
+                            onClick={() =>
+                              handleCancelEditComment(comment.id)
+                            }
+                          >
+                            Cancel
+                          </Button>
+                        </div>
+                      </div>
+                    ) : (
+                      <>
+                        <p className="text-sm text-foreground mt-2 leading-relaxed">
+                          {comment.text}
+                        </p>
+                        <div className="flex gap-3 mt-2">
+                          <button
+                            onClick={() =>
+                              handleReply(comment.id, comment.author)
+                            }
+                            className="text-xs text-primary hover:underline"
+                          >
+                            Reply
+                          </button>
+                          {comment.author === "You" && (
+                            <button
+                              onClick={() =>
+                                handleEditComment(comment.id, true)
+                              }
+                              className="text-xs text-primary hover:underline"
+                            >
+                              Edit
+                            </button>
+                          )}
+                        </div>
+                      </>
+                    )}
                   </div>
                 </div>
 
