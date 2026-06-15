@@ -2,7 +2,6 @@
 
 import React, { useState, useRef, useEffect } from "react"
 import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { cn } from "@/lib/utils"
 
@@ -67,7 +66,7 @@ const getInitials = (name: string): string => {
     .slice(0, 2)
 }
 
-// Get a color based on name for avatar background
+// Deterministic color assignment for avatars based on name - same name always gets same color
 const getAvatarColor = (name: string): string => {
   const colors = [
     "bg-blue-500",
@@ -79,11 +78,12 @@ const getAvatarColor = (name: string): string => {
     "bg-cyan-500",
     "bg-indigo-500",
   ]
+  // Use first and last character codes for a simple hash function
   const hash = name.charCodeAt(0) + name.charCodeAt(name.length - 1)
   return colors[hash % colors.length]
 }
 
-// Avatar component for comments
+// Avatar component displaying user initials with a deterministic color
 const Avatar: React.FC<{ name: string }> = ({ name }) => {
   return (
     <div
@@ -91,6 +91,7 @@ const Avatar: React.FC<{ name: string }> = ({ name }) => {
         "w-8 h-8 rounded-full flex items-center justify-center text-white text-xs font-medium flex-shrink-0",
         getAvatarColor(name)
       )}
+      aria-label={`Avatar for ${name}`}
     >
       {getInitials(name)}
     </div>
@@ -114,23 +115,25 @@ export function IssuePanel() {
     return () => clearTimeout(timer)
   }, [])
 
-  // Handle reply button click
+  // Initiate reply to a comment - focus input and scroll into view
   const handleReply = (commentId: string, authorFirstName: string) => {
     const firstName = authorFirstName.split(" ")[0]
     setInputValue(`@${firstName} `)
     setReplyingTo(commentId)
+    // Use setTimeout to ensure state updates before focusing
     setTimeout(() => {
       inputRef.current?.focus()
       inputRef.current?.scrollIntoView({ behavior: "smooth", block: "nearest" })
     }, 0)
   }
 
-  // Handle submitting a new comment or reply
+  // Submit a new comment or reply. Replies strip the @mention prefix before saving.
   const handleSubmit = () => {
     if (!inputValue.trim()) return
 
     if (replyingTo) {
-      // Add as reply to existing comment
+      // Add as reply to existing comment, removing the @mention prefix
+      const replyText = inputValue.replace(/^@\w+\s/, "").trim()
       setComments((prevComments) =>
         prevComments.map((comment) => {
           if (comment.id === replyingTo) {
@@ -142,7 +145,7 @@ export function IssuePanel() {
                   id: `reply-${Date.now()}`,
                   author: "You",
                   timestamp: "just now",
-                  text: inputValue.replace(/^@\w+\s/, "").trim(),
+                  text: replyText,
                 },
               ],
             }
@@ -168,7 +171,7 @@ export function IssuePanel() {
     setReplyingTo(null)
   }
 
-  // Handle edit reply
+  // Toggle edit mode on a reply - entering edit mode saves original text, exiting discards it
   const handleEditReply = (
     commentId: string,
     replyId: string,
@@ -181,18 +184,10 @@ export function IssuePanel() {
             ...comment,
             replies: comment.replies.map((reply) => {
               if (reply.id === replyId) {
-                if (isEditing) {
-                  return {
-                    ...reply,
-                    isEditing: true,
-                    originalText: reply.text,
-                  }
-                } else {
-                  return {
-                    ...reply,
-                    isEditing: false,
-                    originalText: undefined,
-                  }
+                return {
+                  ...reply,
+                  isEditing,
+                  originalText: isEditing ? reply.text : undefined,
                 }
               }
               return reply
@@ -257,23 +252,15 @@ export function IssuePanel() {
     )
   }
 
-  // Handle edit top-level comment
+  // Toggle edit mode on a top-level comment - entering edit mode saves original text, exiting discards it
   const handleEditComment = (commentId: string, isEditing: boolean) => {
     setComments((prevComments) =>
       prevComments.map((comment) => {
         if (comment.id === commentId) {
-          if (isEditing) {
-            return {
-              ...comment,
-              isEditing: true,
-              originalText: comment.text,
-            }
-          } else {
-            return {
-              ...comment,
-              isEditing: false,
-              originalText: undefined,
-            }
+          return {
+            ...comment,
+            isEditing,
+            originalText: isEditing ? comment.text : undefined,
           }
         }
         return comment
