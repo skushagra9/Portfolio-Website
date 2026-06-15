@@ -10,9 +10,9 @@ const ContactForm = () => {
   const formRef = useRef<HTMLFormElement | null>(null);
   const { toast } = useToast()
 
-  const handleSubmit = async (event: any) => {
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    const formData = new FormData(event.target);
+    const formData = new FormData(event.currentTarget);
     const name = formData.get('name');
     const SenderEmail = formData.get('SenderEmail');
     const message = formData.get('message');

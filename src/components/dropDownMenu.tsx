@@ -22,7 +22,7 @@ export function DropdownMenuDemo() {
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button variant="ghost" size="icon" className="md:hidden">
-          < HamburgerMenuIcon />
+          <HamburgerMenuIcon />
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent>
@@ -39,4 +39,3 @@ export function DropdownMenuDemo() {
       </DropdownMenuContent>
     </DropdownMenu>);
 }
-
