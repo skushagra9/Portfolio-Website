@@ -1,3 +1,8 @@
+/**
+ * Footer component that displays copyright information and branding.
+ * Positioned at the bottom of the page with a top border separator.
+ * The year is hardcoded and should be updated annually or made dynamic if needed.
+ */
 export const Footer = () => {
   return (
     <footer className="border-t border-border mt-8">
