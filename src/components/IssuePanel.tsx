@@ -340,7 +340,7 @@ export function IssuePanel() {
         <div ref={containerRef} className="max-h-96 overflow-y-auto">
           {isLoading ? (
             <div className="flex flex-col items-center justify-center gap-3 py-12">
-              <div className="animate-spin rounded-full h-8 w-8 border-2 border-muted border-t-primary" />
+              <div className="animate-spin rounded-full h-8 w-8 border-2 border-blue-200 border-t-blue-500" />
               <p className="text-sm text-muted-foreground">Loading comments...</p>
             </div>
           ) : (
