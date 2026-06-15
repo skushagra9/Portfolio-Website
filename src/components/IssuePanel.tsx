@@ -101,8 +101,18 @@ export function IssuePanel() {
   const [comments, setComments] = useState<Comment[]>(mockComments)
   const [inputValue, setInputValue] = useState("")
   const [replyingTo, setReplyingTo] = useState<string | null>(null)
+  const [isLoading, setIsLoading] = useState(true)
   const inputRef = useRef<HTMLTextAreaElement>(null)
   const containerRef = useRef<HTMLDivElement>(null)
+
+  // Simulate loading comments on mount
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false)
+    }, 1200)
+
+    return () => clearTimeout(timer)
+  }, [])
 
   // Handle reply button click
   const handleReply = (commentId: string, authorFirstName: string) => {
@@ -328,8 +338,14 @@ export function IssuePanel() {
       <CardContent className="p-0">
         {/* Comments section */}
         <div ref={containerRef} className="max-h-96 overflow-y-auto">
-          <div className="divide-y divide-border">
-            {comments.map((comment) => (
+          {isLoading ? (
+            <div className="flex flex-col items-center justify-center gap-3 py-12">
+              <div className="animate-spin rounded-full h-8 w-8 border-2 border-muted border-t-primary" />
+              <p className="text-sm text-muted-foreground">Loading comments...</p>
+            </div>
+          ) : (
+            <div className="divide-y divide-border">
+              {comments.map((comment) => (
               <div key={comment.id} className="p-4">
                 {/* Main comment */}
                 <div className="flex gap-3 mb-4">
@@ -483,7 +499,8 @@ export function IssuePanel() {
                 )}
               </div>
             ))}
-          </div>
+            </div>
+          )}
         </div>
 
         {/* Comment input section */}
