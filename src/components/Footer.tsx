@@ -1,7 +1,9 @@
 /**
  * Footer component that displays copyright information and branding.
  * Positioned at the bottom of the page with a top border separator.
- * The year is hardcoded and should be updated annually or made dynamic if needed.
+ *
+ * The copyright year is hardcoded to 2026 as a placeholder.
+ * Consider making this dynamic in the future if the site stays live beyond 2026.
  */
 export const Footer = () => {
   return (
