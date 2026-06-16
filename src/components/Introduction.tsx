@@ -10,9 +10,9 @@ export const Introduction = () => {
         <p className="text-muted-foreground leading-relaxed">
           I&apos;m a versatile problem solver with a tech-stack-independent approach,
           adept at seamlessly switching between technologies. I thrive in
-          full-stack development, excelling in both frontend and backend
-          architecture. My expertise extends to DevOps and scalable system
-          design, delivering robust and high-performance solutions across the
+          <strong className="font-semibold text-foreground"> full-stack development</strong>, excelling in both <strong className="font-semibold text-foreground">frontend and backend
+          architecture</strong>. My expertise extends to <strong className="font-semibold text-foreground">DevOps</strong> and <strong className="font-semibold text-foreground">scalable system
+          design</strong>, delivering robust and high-performance solutions across the
           stack.
         </p>
       </div>

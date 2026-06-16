@@ -37,7 +37,7 @@ export const Skills = () => {
         <div className="space-y-4">
           {skillCategories.map((category) => (
             <div key={category.label} className="space-y-2">
-              <span className="text-sm font-medium text-muted-foreground uppercase tracking-wider">
+              <span className="text-sm font-semibold text-foreground uppercase tracking-wider">
                 {category.label}
               </span>
               <div className="flex flex-wrap gap-2">

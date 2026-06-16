@@ -58,7 +58,7 @@ export const Exp = () => {
                     <h3 className="font-[family-name:var(--font-display)] text-lg font-semibold">
                       {e.title.name}
                     </h3>
-                    <p className="text-sm text-muted-foreground">
+                    <p className="text-sm font-medium text-muted-foreground">
                       {e.title.cargo} &middot; {e.timeline} ({e.year})
                     </p>
                   </div>
