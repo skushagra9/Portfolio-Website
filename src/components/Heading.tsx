@@ -21,7 +21,7 @@ export default function Header() {
             href="#projects"
             className="inline-flex h-10 items-center rounded-lg bg-primary px-6 text-sm font-medium text-primary-foreground shadow-sm transition-colors hover:bg-primary/90"
           >
-            View Work
+            Get Hello
           </a>
           <a
             href="#contact"
