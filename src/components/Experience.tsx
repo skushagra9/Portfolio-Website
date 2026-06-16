@@ -4,6 +4,10 @@ import { Experience } from "@/constants/Experience";
 import { FadeIn } from "./FadeIn";
 import { ReactNode } from "react";
 
+/**
+ * Parse markdown-style links in text and convert them to interactive anchor elements.
+ * Supports format: [link text](url)
+ */
 const parseMarkdownLinks = (text: string): ReactNode[] => {
   const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g;
   const parts: ReactNode[] = [];

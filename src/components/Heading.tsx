@@ -1,6 +1,11 @@
+// Highlight component for emphasizing text with semantic meaning
+const Highlight = ({ children }: { children: React.ReactNode }) => (
+  <strong className="font-semibold text-foreground">{children}</strong>
+);
+
 export default function Header() {
   return (
-    <section className="relative w-full flex flex-col items-center justify-center pt-2 pb-4 px-6 md:px-8 overflow-hidden">
+    <section className="relative w-full flex flex-col items-center justify-center pt-32 pb-20 px-6 md:px-8 overflow-hidden">
       <div className="absolute inset-0 -z-10">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-primary/5 blur-3xl" />
       </div>
@@ -13,8 +18,8 @@ export default function Header() {
           Kushagra Sharma
         </h1>
         <p className="max-w-lg mx-auto text-lg text-muted-foreground leading-relaxed">
-          Building <strong className="font-semibold text-foreground">scalable systems</strong>, <strong className="font-semibold text-foreground">DeFi infrastructure</strong>, and <strong className="font-semibold text-foreground">AI-powered tools</strong>
-          — from <strong className="font-semibold text-foreground">blockchain indexers</strong> to full-stack products.
+          Building <Highlight>scalable systems</Highlight>, <Highlight>DeFi infrastructure</Highlight>, and <Highlight>AI-powered tools</Highlight>
+          — from <Highlight>blockchain indexers</Highlight> to full-stack products.
         </p>
         <div className="flex items-center justify-center gap-4 pt-4">
           <a

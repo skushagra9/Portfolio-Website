@@ -1,5 +1,6 @@
 import { FadeIn } from "./FadeIn";
 
+// Skill categories with visual emphasis - displayed with semibold weight and foreground color for better hierarchy
 const skillCategories = [
   {
     label: "Languages",

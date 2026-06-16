@@ -1,5 +1,10 @@
 import { FadeIn } from "./FadeIn";
 
+// Highlight component for emphasizing key skills and expertise areas
+const Highlight = ({ children }: { children: React.ReactNode }) => (
+  <strong className="font-semibold text-foreground">{children}</strong>
+);
+
 export const Introduction = () => {
   return (
     <FadeIn className="w-full max-w-2xl">
@@ -10,9 +15,9 @@ export const Introduction = () => {
         <p className="text-muted-foreground leading-relaxed">
           I&apos;m a versatile problem solver with a tech-stack-independent approach,
           adept at seamlessly switching between technologies. I thrive in
-          <strong className="font-semibold text-foreground"> full-stack development</strong>, excelling in both <strong className="font-semibold text-foreground">frontend and backend
-          architecture</strong>. My expertise extends to <strong className="font-semibold text-foreground">DevOps</strong> and <strong className="font-semibold text-foreground">scalable system
-          design</strong>, delivering robust and high-performance solutions across the
+          <Highlight> full-stack development</Highlight>, excelling in both <Highlight>frontend and backend
+          architecture</Highlight>. My expertise extends to <Highlight>DevOps</Highlight> and <Highlight>scalable system
+          design</Highlight>, delivering robust and high-performance solutions across the
           stack.
         </p>
       </div>
