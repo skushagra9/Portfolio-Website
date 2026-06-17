@@ -1,17 +1,24 @@
-import React from 'react';
 import { cn } from '@/lib/utils';
 
 interface SpinnerProps {
+  /** Optional additional CSS classes to merge with spinner styles */
   className?: string;
+  /** Size variant: sm (w-4 h-4), md (w-5 h-5), lg (w-6 h-6) */
   size?: 'sm' | 'md' | 'lg';
 }
 
+/** Tailwind size classes for each spinner variant */
 const sizeMap = {
   sm: 'w-4 h-4',
   md: 'w-5 h-5',
   lg: 'w-6 h-6',
-};
+} as const;
 
+/**
+ * Animated loading spinner with customizable size.
+ * Renders an SVG circle that rotates via Tailwind's `animate-spin`.
+ * Used in buttons and async operations to indicate pending requests.
+ */
 export function Spinner({ className, size = 'md' }: SpinnerProps) {
   return (
     <svg
