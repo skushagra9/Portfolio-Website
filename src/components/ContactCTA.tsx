@@ -4,6 +4,8 @@ import { Button } from "@/components/ui/button";
 import { FadeIn } from "./FadeIn";
 
 export function ContactCTA() {
+  // Scroll to the contact form section when the CTA button is clicked
+  // Uses smooth scrolling to provide visual feedback to the user
   const handleScroll = () => {
     const contactSection = document.getElementById("contact");
     if (contactSection) {
@@ -22,7 +24,7 @@ export function ContactCTA() {
             Interested in collaborating on your next project?
           </p>
         </div>
-        <Button onClick={handleScroll} size="lg">
+        <Button onClick={handleScroll} size="lg" aria-label="Contact me by scrolling to the contact form">
           Contact Me
         </Button>
       </div>
