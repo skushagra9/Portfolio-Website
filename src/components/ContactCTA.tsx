@@ -24,7 +24,7 @@ export function ContactCTA() {
             Interested in collaborating on your next project?
           </p>
         </div>
-        <Button onClick={handleScroll} size="lg" aria-label="Contact me by scrolling to the contact form">
+        <Button onClick={handleScroll} size="lg" aria-label="Contact me by scrolling to the contact form" className="bg-pink-500 hover:bg-pink-600 text-white">
           Contact Me
         </Button>
       </div>

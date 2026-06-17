@@ -8,9 +8,9 @@ import { FadeIn } from './FadeIn';
 
 const ContactForm = () => {
   const formRef = useRef<HTMLFormElement | null>(null);
-  const { toast } = useToast()
+  const { toast } = useToast();
 
-  const handleSubmit = async (event: any) => {
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const formData = new FormData(event.target);
     const name = formData.get('name');
