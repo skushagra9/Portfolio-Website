@@ -12,7 +12,7 @@ const ContactForm = () => {
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    const formData = new FormData(event.target);
+    const formData = new FormData(event.currentTarget);
     const name = formData.get('name');
     const SenderEmail = formData.get('SenderEmail');
     const message = formData.get('message');
