@@ -1,5 +1,5 @@
 "use client"
-import { useRef } from 'react';
+import { useRef, FormEvent } from 'react';
 import { Label } from "@/components/ui/label";
 import { Input } from "./ui/input";
 import { Button } from "./ui/button";
@@ -10,7 +10,7 @@ const ContactForm = () => {
   const formRef = useRef<HTMLFormElement | null>(null);
   const { toast } = useToast()
 
-  const handleSubmit = async (event: any) => {
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const formData = new FormData(event.target);
     const name = formData.get('name');
@@ -38,7 +38,8 @@ const ContactForm = () => {
         description: "Please Try Again",
         variant: "error"
       })
-      console.error(error)
+      const errorMessage = error instanceof Error ? error.message : "Unknown error";
+      console.error(errorMessage)
     }
   };
 

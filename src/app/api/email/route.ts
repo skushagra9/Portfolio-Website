@@ -34,7 +34,8 @@ export async function POST(request: Request) {
     })
 
   } catch (error) {
-    console.error("Error saving data to database:", error);
+    const errorMessage = error instanceof Error ? error.message : "Unknown error";
+    console.error("Error saving data to database:", errorMessage);
     return Response.json({ error: "Error saving data to database" });
   }
 }
