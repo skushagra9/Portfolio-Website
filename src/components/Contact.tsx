@@ -1,18 +1,22 @@
-"use client"
-import { useRef } from 'react';
+"use client";
+import { useRef, useState } from 'react';
 import { Label } from "@/components/ui/label";
 import { Input } from "./ui/input";
 import { Button } from "./ui/button";
 import { useToast } from './ui/use-toast';
 import { FadeIn } from './FadeIn';
+import { Spinner } from './ui/spinner';
 
 const ContactForm = () => {
   const formRef = useRef<HTMLFormElement | null>(null);
-  const { toast } = useToast()
+  const [isLoading, setIsLoading] = useState(false);
+  const { toast } = useToast();
 
-  const handleSubmit = async (event: any) => {
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    const formData = new FormData(event.target);
+    // Disable button and show spinner immediately to prevent double-submission
+    setIsLoading(true);
+    const formData = new FormData(event.target as HTMLFormElement);
     const name = formData.get('name');
     const SenderEmail = formData.get('SenderEmail');
     const message = formData.get('message');
@@ -39,6 +43,8 @@ const ContactForm = () => {
         variant: "error"
       })
       console.error(error)
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -93,8 +99,15 @@ const ContactForm = () => {
                 className="flex w-full rounded-lg border border-border bg-secondary/30 px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 resize-none"
               />
             </div>
-            <Button type="submit" className="w-full">
-              Send Message
+            <Button type="submit" disabled={isLoading} className="w-full" aria-label={isLoading ? "Submitting contact form" : "Send message"}>
+              {isLoading ? (
+                <>
+                  <Spinner size="sm" className="mr-2" />
+                  Sending...
+                </>
+              ) : (
+                'Send Message'
+              )}
             </Button>
           </form>
         </div>

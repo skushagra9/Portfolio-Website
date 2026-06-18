@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -8,7 +8,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { HamburgerMenuIcon } from "@radix-ui/react-icons";
-import Link from 'next/link'
+import Link from 'next/link';
 
 const navigation = [
   { name: "Experience", href: "#experience" },
@@ -22,7 +22,7 @@ export function DropdownMenuDemo() {
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button variant="ghost" size="icon" className="md:hidden">
-          < HamburgerMenuIcon />
+          <HamburgerMenuIcon />
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent>

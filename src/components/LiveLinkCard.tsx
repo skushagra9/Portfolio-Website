@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
-import { Link1Icon } from "@radix-ui/react-icons"
-import Image from "next/image"
+import { Link1Icon } from "@radix-ui/react-icons";
+import Image from "next/image";
 
 interface ProjectCardProps {
   name: string

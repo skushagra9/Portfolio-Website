@@ -34,3 +34,10 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Storybook (sandbox-only preview artifacts)
+.storybook/
+*.stories.*
+src/stories/
+vitest.config.ts
+vitest.shims.d.ts
