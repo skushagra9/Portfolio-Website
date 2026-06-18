@@ -10,7 +10,7 @@ import { Spinner } from './ui/spinner';
 const ContactForm = () => {
   const formRef = useRef<HTMLFormElement | null>(null);
   const [isLoading, setIsLoading] = useState(false);
-  const { toast } = useToast()
+  const { toast } = useToast();
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
