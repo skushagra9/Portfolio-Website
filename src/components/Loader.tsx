@@ -60,7 +60,7 @@ const labelSizeMap: Record<LoaderSize, string> = {
 function SpinnerLoader({ size = "md", className }: { size?: LoaderSize; className?: string }) {
   return (
     <svg
-      className={cn("animate-spin text-yellow-400", spinnerSizeMap[size], className)}
+      className={cn("animate-spin text-green-400", spinnerSizeMap[size], className)}
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
       viewBox="0 0 24 24"
@@ -92,7 +92,7 @@ function DotsLoader({ size = "md", className }: { size?: LoaderSize; className?:
         <div
           key={i}
           className={cn(
-            "rounded-full bg-yellow-400",
+            "rounded-full bg-green-400",
             dotSizeMap[size]
           )}
           style={{
@@ -110,8 +110,8 @@ function DotsLoader({ size = "md", className }: { size?: LoaderSize; className?:
 function PulseLoader({ size = "md", className }: { size?: LoaderSize; className?: string }) {
   return (
     <div className={cn("relative flex items-center justify-center", spinnerSizeMap[size], className)} aria-hidden="true">
-      <div className="absolute inset-0 rounded-full bg-yellow-400/30 animate-ping" />
-      <div className="relative rounded-full bg-yellow-400" style={{ width: "40%", height: "40%" }} />
+      <div className="absolute inset-0 rounded-full bg-green-400/30 animate-ping" />
+      <div className="relative rounded-full bg-green-400" style={{ width: "40%", height: "40%" }} />
     </div>
   );
 }
@@ -125,7 +125,7 @@ function BarsLoader({ size = "md", className }: { size?: LoaderSize; className?:
       {[0, 1, 2, 3].map((i) => (
         <div
           key={i}
-          className={cn("rounded-sm bg-yellow-400", width, height)}
+          className={cn("rounded-sm bg-green-400", width, height)}
           style={{
             animation: "loader-bars 1s ease-in-out infinite",
             animationDelay: `${i * 0.15}s`,
@@ -142,7 +142,7 @@ function RingLoader({ size = "md", className }: { size?: LoaderSize; className?:
   return (
     <div
       className={cn(
-        "rounded-full border-[3px] border-yellow-400/20 border-t-yellow-400",
+        "rounded-full border-[3px] border-green-400/20 border-t-green-400",
         spinnerSizeMap[size],
         className
       )}
@@ -217,7 +217,7 @@ export function PageLoader({ label = "Loading…", visible = true }: PageLoaderP
     >
       {/* Gradient glow behind spinner */}
       <div className="relative">
-        <div className="absolute -inset-6 rounded-full bg-yellow-400/10 blur-xl" />
+        <div className="absolute -inset-6 rounded-full bg-green-400/10 blur-xl" />
         <SpinnerLoader size="xl" className="relative" />
       </div>
       <p className="text-muted-foreground text-sm font-medium tracking-wide">{label}</p>
