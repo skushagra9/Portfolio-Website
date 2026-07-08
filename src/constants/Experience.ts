@@ -1,7 +1,23 @@
 export const Experience = [
   {
+    year: 2026,
+    timeline: "June (Present)",
+    title: {
+      name: "Autonomy AI",
+      cargo: "Full Stack Engineer (Remote)",
+    },
+    description: [
+      `Building an autonomous AI coding-agent platform (FEI) where agents plan, edit, and open PRs inside isolated cloud sandboxes, with a design-aware LLM emitting actionable chips to guide multi-step tasks.`,
+      `Designed and deployed a FastMCP-based MCP server exposing the platform to external clients, with OAuth + app-scoped JWT auth, shipped to AWS ECS via Pulumi.`,
+      `Led webapp features in React/TypeScript (HeroUI v3 migration, multi-select action chips, version-diff review UI) and built a real-time notification layer (browser, sound, Slack) over WebSocket topics.`,
+    ],
+    details: [
+      "Python, Typescript, React, FastMCP, AWS, Pulumi, PostgreSQL, LLMs",
+    ],
+  },
+  {
     year: 2025,
-    timeline: "May (Present)",
+    timeline: "May 2025 - May 2026",
     title: {
       name: "Absinthe Labs",
       cargo: "Software Engineer",
@@ -9,7 +25,7 @@ export const Experience = [
     description: [
       `Led development of [Absinthe Adapters](https://github.com/absinthelabs/absinthe-adapters), a scalable multi-chain indexing platform (Morpho V1/V2, Uniswap V2/V3, Orca) for transactions and time-weighted balances, serving live customers in production.`,
       `Optimized Orca indexer by replacing O(n×m) transfer scans with an event-driven pipeline (Mint-Tracker + Transfer-Watcher + external indexer), significantly reducing CPU usage and enabling near real-time indexing.`,
-      `Built Atlas, an AI-powered support engineer integrating Slack, Linear, and GitHub to autonomously triage issues, generate fixes, and open PRs, reducing CSM/support effort by 70%.`,
+      `Built Atlas, an AI-powered support engineer integrating Slack, Linear, and GitHub to autonomously triage issues, generate fixes, and open PRs, reducing CSM/support effort by 80%.`,
       `Architected SybilGuard, a soulbound NFT-based reputation system using EIP-712 voucher signing, backend scoring (17+ signals), and full-stack minting flows with minimal on-chain state.`,
       `Worked as a Forward Deployed Engineer, partnering with customers on live campaigns; built self-serve data and campaign flows enabling teams to configure tracking without engineering support.`,
       `Built scalable identity backfill pipelines (PostgreSQL) using Union-Find for identity stitching, streaming/keyset reads, batched writes, and idempotent CLI tooling, enabling reliable large-scale backfills (incl. SybilGuard scoring).`,
