@@ -97,6 +97,16 @@
   50% { background-position: 200% center; }
 }
 
+@keyframes loader-bounce {
+  0%, 80%, 100% { transform: translateY(0); opacity: 0.4; }
+  40% { transform: translateY(-50%); opacity: 1; }
+}
+
+@keyframes loader-bars {
+  0%, 40%, 100% { transform: scaleY(0.4); opacity: 0.5; }
+  20% { transform: scaleY(1); opacity: 1; }
+}
+
 .line {
   width: 2px;
   margin: 0 auto;
