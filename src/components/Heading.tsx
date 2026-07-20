@@ -10,7 +10,7 @@ export default function Header() {
           Software Engineer
         </p>
         <h1 className="font-[family-name:var(--font-display)] text-5xl md:text-7xl font-extrabold tracking-tight">
-          Kushagra Sharma
+          Monika Sharma
         </h1>
         <p className="max-w-lg mx-auto text-lg text-muted-foreground leading-relaxed">
           Building scalable systems, DeFi infrastructure, and AI-powered tools
