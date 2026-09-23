@@ -31,3 +31,5 @@ If you want to learn more about this project or have any questions, send me an e
     ```sh
     npm run dev
    ````
+
+Proxy test via GitHub App (AUT-7719).
