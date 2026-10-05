@@ -2,6 +2,7 @@ import Header from "@/components/Heading";
 import { Introduction } from "@/components/Introduction";
 import { Skills } from "@/components/Skills";
 import { Exp } from "@/components/Experience";
+import { TestimonialsSection } from "@/components/Testimonials";
 import Project from "@/components/Projects";
 import ContactForm from "@/components/Contact";
 
@@ -13,6 +14,7 @@ export default function Home() {
         <Introduction />
         <Skills />
         <Exp />
+        <TestimonialsSection />
         <Project />
         <ContactForm />
       </div>
