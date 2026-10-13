@@ -10,7 +10,7 @@ const links = [
 export const Footer = () => {
   return (
     <footer className="border-t border-border mt-8">
-      <div className="max-w-screen-lg mx-auto px-6 md:px-8 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div className="max-w-screen-lg mx-auto px-6 md:px-8 pt-10 flex flex-col sm:flex-row items-center justify-between gap-4">
         <span className="text-sm text-muted-foreground">
           &copy; {new Date().getFullYear()} Kushagra Sharma
         </span>
@@ -28,7 +28,7 @@ export const Footer = () => {
           ))}
         </div>
       </div>
-      <p className="max-w-screen-lg mx-auto px-6 md:px-8 pt-4 pb-8 text-center text-xs text-muted-foreground">
+      <p className="max-w-screen-lg mx-auto px-6 md:px-8 pt-4 pb-8 text-center text-xs text-destructive">
         Built for the PR comment loop test (GitHub App)
       </p>
     </footer>
