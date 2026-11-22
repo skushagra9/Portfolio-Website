@@ -31,7 +31,7 @@ export function Navbar() {
           <Button
             onClick={() =>
               window.open(
-                "https://drive.google.com/file/d/1Uu2leAsiUom_H8YBuzq-lT6Wz1sZf1tf/view?usp=sharing"
+                "/Kushagra_Sharma_Resume.pdf"
               )
             }
             variant="ghost"
