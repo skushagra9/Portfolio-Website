@@ -4,15 +4,16 @@ export const Experience = [
     timeline: "June (Present)",
     title: {
       name: "Autonomy AI",
-      cargo: "Full Stack Engineer (Remote)",
+      cargo: "Software Engineer (Remote)",
     },
     description: [
-      `Building an autonomous AI coding-agent platform (FEI) where agents plan, edit, and open PRs inside isolated cloud sandboxes, with a design-aware LLM emitting actionable chips to guide multi-step tasks.`,
-      `Designed and deployed a FastMCP-based MCP server exposing the platform to external clients, with OAuth + app-scoped JWT auth, shipped to AWS ECS via Pulumi.`,
-      `Led webapp features in React/TypeScript (HeroUI v3 migration, multi-select action chips, version-diff review UI) and built a real-time notification layer (browser, sound, Slack) over WebSocket topics.`,
+      `Built the Autonomy MCP server from design doc to production. It is a hosted MCP server with its own OAuth server, letting Claude Desktop, Cursor and ChatGPT start, steer and ship coding-agent tasks. It also has a tool-reference docs site and deploy-time contract checks against the backend API. (~35 merged PRs)`,
+      `Automated the pull-request loop for an AI coding agent. One webhook-driven PR sync covers GitHub, GitLab, Bitbucket and Azure DevOps. The agent answers reviewer comments, fixes failing CI and merge conflicts, and re-runs CI failures caused by infrastructure. A "review learner" turns past review comments into rules the agent has to follow. (~60 PRs)`,
+      `Built an LLM cost ledger that matches the provider's bill. Every OpenRouter call is recorded, including streamed calls that are abandoned or rejected. The ledger is reconciled against the actual invoice and feeds a cost dashboard that shows spend per task, per request and per source, plus the exact LLM cost of each CI run. (~25 PRs)`,
+      `Built visual code review and hardened security. "What changed" shows a before/after slider, pixel diff and live highlights of changed screens. A screen map shows the affected user flows, and a tree-sitter code map covers Python, Java, C#, PHP, Vue and Svelte. On security: a git remote proxy keeps provider tokens out of sandboxes, per-host preview passes replaced a shared auth cookie, plus API-hardening fixes and public share links. (~75 PRs)`,
     ],
     details: [
-      "Python, Typescript, React, FastMCP, AWS, Pulumi, PostgreSQL, LLMs",
+      "Python, Typescript, React, MCP, OAuth, PostgreSQL, AWS, Pulumi, Tree-sitter, LLMs",
     ],
   },
   {
